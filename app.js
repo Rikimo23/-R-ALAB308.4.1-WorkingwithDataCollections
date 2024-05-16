@@ -18,7 +18,20 @@ for (let i = 1; i < rows.length; i++) {
 
 console.log(results);
 
+//Part 3:Transforming Data//
 
+const transformedData = [];
+
+// Start from index 1 as the first row is the header
+for (let i = 1; i < results.length; i++) {
+  const obj = {};
+  for (let j = 0; j < results[i].length; j++) {
+    obj[results[0][j].toLowerCase()] = results[i][j];
+  }
+  transformedData.push(obj);
+}
+
+console.log(transformedData);
 
 
 
