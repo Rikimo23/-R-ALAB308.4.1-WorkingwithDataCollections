@@ -33,6 +33,30 @@ for (let i = 1; i < results.length; i++) {
 
 console.log(transformedData);
 
+//Part4:Sorting and Manipulating data//
+
+// Remove the last element from the sorted array
+transformedData.pop();
+
+// Insert object at index 1
+transformedData.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
+
+// Add object to the end of the array
+transformedData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+
+console.log(transformedData);
+
+// Calculate average age
+let totalAge = 0;
+for (let i = 0; i < transformedData.length; i++) {
+  totalAge += parseInt(transformedData[i].age);
+}
+const averageAge = totalAge / transformedData.length;
+console.log("Average age:", averageAge);
+
+
+
+
 
 
 
