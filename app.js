@@ -55,9 +55,15 @@ const averageAge = totalAge / transformedData.length;
 console.log("Average age:", averageAge);
 
 
+//Part5:Full Circle (Transforming Data back into csv format)//
 
+// Creating CSV string
+let newCsvString = transformedData.map(obj => Object.values(obj).join(",")).join("\n");
 
+// Adding headers
+newCsvString = results[0].join(",") + "\n" + newCsvString;
 
+console.log(newCsvString);
 
 
 
